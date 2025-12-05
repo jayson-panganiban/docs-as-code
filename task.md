@@ -71,7 +71,7 @@
 
 ## Phase 4: Advanced Blog Series ✅ DONE
 
-- [x] Part 1: Initial Scaffold & Architecture (424 lines)
+- [x] Part 1: Initial Scaffold & Architecture
   - Project structure walkthrough
   - Interface-first design explanation
   - Dependency injection patterns
@@ -80,7 +80,7 @@
   - Testing design
   - Code review walkthrough
 
-- [x] Part 2: Design Patterns & Architectural Decisions (557 lines)
+- [x] Part 2: Design Patterns & Architectural Decisions
   - Interface segregation principle
   - Dependency injection rationale
   - Repository pattern details
@@ -92,7 +92,7 @@
   - Performance implications
   - Backward compatibility
 
-- [x] Part 3: Implementation Walkthrough & Concurrency (584 lines)
+- [x] Part 3: Implementation Walkthrough & Concurrency
   - MemoryStore under the hood
   - Thread-safe storage explanation
   - CreateDocumentJob walkthrough
@@ -119,7 +119,7 @@
 
 ## Phase 5: Beginner Blog Series ✅ DONE
 
-- [x] Part 1: Getting Started (740 lines)
+- [x] Part 1: Getting Started
   - Welcome and overview
   - Project explanation
   - Project structure explained
@@ -133,7 +133,7 @@
   - Common mistakes documented
   - Exercises provided
 
-- [x] Part 2: Threads, Tests & JSON (771 lines)
+- [x] Part 2: Threads, Tests & JSON
   - Goroutines explained simply
   - Data races problem/solution
   - Mutex explained with examples
@@ -150,7 +150,7 @@
   - Common mistakes
   - Exercises
 
-- [x] Part 3: PDF Conversion & Production Features (833 lines)
+- [x] Part 3: PDF Conversion & Production Features
   - Implementing Converter interface
   - Mock converter
   - Simple converter placeholder

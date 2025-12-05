@@ -7,13 +7,13 @@
 #### 1. **Advanced Series** (3 parts, 1,793 lines)
 For experienced developers and architectural deep-dives.
 
-- **Part 1: Initial Scaffold & Architecture** (424 lines)
+- **Part 1: Initial Scaffold & Architecture**
   - Interfaces and clean architecture
   - Dependency injection patterns
   - Project structure decisions
   - Foundation for testing
 
-- **Part 2: Design Patterns & Architectural Decisions** (557 lines)
+- **Part 2: Design Patterns & Architectural Decisions**
   - Interface segregation principle
   - Dependency injection deep-dive
   - Repository pattern
@@ -23,7 +23,7 @@ For experienced developers and architectural deep-dives.
   - Scalability implications
   - Backward compatibility
 
-- **Part 3: Implementation Walkthrough & Concurrency** (584 lines)
+- **Part 3: Implementation Walkthrough & Concurrency**
   - MemoryStore internals and thread safety
   - RWMutex explained with performance implications
   - Full request lifecycle tracing
@@ -35,7 +35,7 @@ For experienced developers and architectural deep-dives.
 #### 2. **Beginner Series** (3 parts + index, 2,731 lines)
 For developers new to Go with detailed code explanations.
 
-- **Part 1: Getting Started** (740 lines)
+- **Part 1: Getting Started**
   - Project structure explained
   - What interfaces are and why they matter (with real-world analogy)
   - Dependency injection from first principles
@@ -45,7 +45,7 @@ For developers new to Go with detailed code explanations.
   - Common beginner mistakes explained
   - Design decisions for beginners
 
-- **Part 2: Threads, Tests & JSON** (771 lines)
+- **Part 2: Threads, Tests & JSON**
   - Goroutines and concurrency basics
   - Data races: the problem and solution
   - Mutex and RWMutex with timeline diagrams
@@ -57,7 +57,7 @@ For developers new to Go with detailed code explanations.
   - HTTP status codes explained
   - Error handling patterns
 
-- **Part 3: PDF Conversion & Production Features** (833 lines)
+- **Part 3: PDF Conversion & Production Features**
   - Implementing the Converter interface
   - Structured logging (JSON logs)
   - Graceful shutdown implementation
@@ -69,7 +69,7 @@ For developers new to Go with detailed code explanations.
   - Common production issues and solutions
   - Complete production-ready code
 
-- **Beginner Index** (387 lines)
+- **Beginner Index**
   - Series overview
   - Learning paths for different audiences
   - Time estimates for each part
@@ -83,7 +83,7 @@ For developers new to Go with detailed code explanations.
 
 ### Additional Navigation & Organization
 
-- **Blog Series INDEX** (374 lines)
+- **Blog Series INDEX**
   - Master index of both series
   - How to choose between series
   - Reading combinations

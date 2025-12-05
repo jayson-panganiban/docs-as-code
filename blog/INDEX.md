@@ -236,14 +236,14 @@ cmd/
 docs-as-code/
 ├── blog/                           # Blog content
 │   ├── beginner/                   # Beginner series
-│   │   ├── 01-getting-started.md  # (740 lines)
-│   │   ├── 02-threads-tests-json.md # (771 lines)
-│   │   ├── 03-pdf-conversion.md    # (833 lines)
-│   │   └── README.md               # (387 lines)
-│   ├── 01-initial-scaffold.md      # (424 lines)
-│   ├── 02-design-patterns.md       # (557 lines)
-│   ├── 03-implementation-walkthrough.md # (584 lines)
-│   ├── README.md                   # (228 lines)
+│   │   ├── 01-getting-started.md
+│   │   ├── 02-threads-tests-json.md
+│   │   ├── 03-pdf-conversion.md
+│   │   └── README.md
+│   ├── 01-initial-scaffold.md
+│   ├── 02-design-patterns.md
+│   ├── 03-implementation-walkthrough.md
+│   ├── README.md
 │   └── INDEX.md                    # This file
 ├── docs/                           # Technical documentation
 │   ├── API.md                      # API reference

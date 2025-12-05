@@ -292,6 +292,7 @@
 - [x] docs/API.md complete with examples
 - [x] docs/ARCHITECTURE.md thorough
 - [x] docs/IMPLEMENTATION.md detailed
+- [x] Removed line count references from all docs
 - [ ] Blog content proofread for typos
 - [ ] Cross-references verified
 - [ ] Links in docs checked

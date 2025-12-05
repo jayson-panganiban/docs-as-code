@@ -8,24 +8,23 @@ import (
 	"github.com/go-chi/chi/v5"
 
 	httphandlers "docs-as-code/internal/http"
+	"docs-as-code/internal/store"
 )
 
 func main() {
 	// Initialize dependencies
-	// In a real application, these would be database connections, actual converters, etc.
-	// For now, they are nil/placeholder implementations.
-	var store interface{} // Placeholder for DocumentStore
-	var converter interface{} // Placeholder for Converter
+	documentStore := store.NewMemoryStore()
+	// converter := NewPDFConverter() // TODO: implement when ready
 
 	// Create the HTTP server with injected dependencies
-	server := httphandlers.NewServer(nil, nil)
+	server := httphandlers.NewServer(documentStore, nil)
 
 	// Set up the chi router
 	router := chi.NewRouter()
 
 	// Define API routes
-	router.Post("/v1/documents", server.handleCreateDocument)
-	router.Get("/v1/documents/{id}", server.handleGetDocumentStatus)
+	router.Post("/v1/documents", server.HandleCreateDocument)
+	router.Get("/v1/documents/{id}", server.HandleGetDocumentStatus)
 
 	// Start the HTTP server
 	addr := ":8080"

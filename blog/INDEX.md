@@ -15,11 +15,11 @@ This project includes **two complete blog series** teaching you to build a produ
 
 A gentle, thorough introduction to building APIs in Go. Assumes no Go knowledge.
 
-| Part | Title | Time | Topics |
-|------|-------|------|--------|
-| 1 | [Getting Started](./beginner/01-getting-started.md) | 30 min | Structure, interfaces, dependency injection, handlers |
-| 2 | [Threads, Tests & JSON](./beginner/02-threads-tests-json.md) | 35 min | Goroutines, mutexes, unit tests, JSON responses |
-| 3 | [PDF Conversion & Production](./beginner/03-pdf-conversion.md) | 40 min | Logging, graceful shutdown, configuration, health checks |
+| Part | Title | Topics |
+|------|-------|--------|
+| 1 | [Getting Started](./beginner/01-getting-started.md) | Structure, interfaces, dependency injection, handlers |
+| 2 | [Threads, Tests & JSON](./beginner/02-threads-tests-json.md) | Goroutines, mutexes, unit tests, JSON responses |
+| 3 | [PDF Conversion & Production](./beginner/03-pdf-conversion.md) | Logging, graceful shutdown, configuration, health checks |
 
 **What You'll Learn**:
 - ✓ How to structure a Go project properly
@@ -30,7 +30,7 @@ A gentle, thorough introduction to building APIs in Go. Assumes no Go knowledge.
 
 **Prerequisites**: Basic Go syntax knowledge. That's it!
 
-**Total Time**: 2-3 hours reading + 2-3 hours coding
+
 
 ---
 
@@ -55,8 +55,6 @@ Deep technical explorations of design patterns and implementation details. Assum
 
 **Prerequisites**: Solid Go knowledge, comfortable with packages and interfaces
 
-**Total Time**: 1.5-2 hours reading, reference material for implementation
-
 ---
 
 ## How to Choose Your Path
@@ -66,7 +64,7 @@ Deep technical explorations of design patterns and implementation details. Assum
 - [ ] You want hands-on learning with exercises
 - [ ] You prefer explanation-heavy with lots of examples
 - [ ] You want code you can run and modify
-- [ ] You have 2-4 hours available
+
 
 ### Choose Advanced Series If:
 - [ ] You have professional Go experience
@@ -74,29 +72,27 @@ Deep technical explorations of design patterns and implementation details. Assum
 - [ ] You want to understand design pattern rationale
 - [ ] You're interested in architectural decisions
 - [ ] You want deep technical analysis
-- [ ] You have 1-2 hours available
 
 ### Do Both If:
-- [ ] You have the time (total: 4-5 hours)
 - [ ] You want complete mastery of the topic
 - [ ] You're teaching others (good perspective from multiple angles)
 
 ## Reading Combinations
 
-### Path 1: Complete Beginner (3-4 hours)
+### Path 1: Complete Beginner
 1. Beginner Part 1, 2, 3 (read + do exercises)
 2. skim Advanced Part 1 (understand design rationale)
 
 **Outcome**: A production-grade API you built and understand
 
-### Path 2: Experienced Dev Deep Dive (2 hours)
+### Path 2: Experienced Dev Deep Dive
 1. Quick skim Beginner README
 2. Advanced Part 1, 2, 3 (focus on patterns)
 3. Refer back to code in /internal for examples
 
 **Outcome**: Deep understanding of design patterns and trade-offs
 
-### Path 3: Complete Mastery (5 hours)
+### Path 3: Complete Mastery
 1. Beginner Series (all 3 parts)
 2. Advanced Series (all 3 parts)
 3. Review actual code in /cmd and /internal
@@ -260,13 +256,7 @@ docs-as-code/
 └── README.md                       # Project README
 ```
 
-## Time Investment
 
-| Reader | Series | Time | Outcome |
-|--------|--------|------|---------|
-| New to Go | Beginner Only | 2-4 hrs | Can build basic APIs |
-| Experienced Dev | Advanced Only | 1.5-2 hrs | Understands patterns |
-| Thorough Learner | Both | 4-5 hrs | Deep expertise |
 
 ## What You'll Build
 
@@ -315,8 +305,8 @@ A: If you're unsure, start with Beginner. It's more thorough and builds intuitio
 **Q: Can I skip parts?**
 A: Not recommended. Each part builds on the previous one.
 
-**Q: How long will this really take?**
-A: Beginner: 2-4 hours. Advanced: 1.5-2 hours. Plus exercises: add 2-3 hours.
+**Q: How long will this take?**
+A: It varies by reading pace and whether you do exercises. Read at your own speed.
 
 **Q: Do I need all this content?**
 A: No, but it helps. The code is simple; understanding *why* it's built this way is the value.

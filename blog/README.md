@@ -176,8 +176,7 @@ A: Yes! The project structure and patterns are directly applicable. The code in 
 **Q: What should I know before reading?**
 A: Basic Go knowledge (packages, interfaces, goroutines). No advanced concurrency knowledge required—we'll explain it.
 
-**Q: How long does each part take to read?**
-A: Part 1: 20 min, Part 2: 30 min, Part 3: 25 min. Each includes code examples to study.
+
 
 ## Feedback & Discussion
 

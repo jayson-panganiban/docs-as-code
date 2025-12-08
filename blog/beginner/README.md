@@ -22,7 +22,7 @@ By the end of this series, you'll have built:
 ## Series Parts
 
 ### Part 1: Getting Started
-**Status**: ✅ Complete | **Time**: 30 min | **Difficulty**: Beginner
+**Status**: ✅ Complete | **Difficulty**: Beginner
 
 Learn the basics of structuring a Go project and building your first API.
 
@@ -41,7 +41,7 @@ Learn the basics of structuring a Go project and building your first API.
 ---
 
 ### Part 2: Threads, Tests & JSON
-**Status**: ✅ Complete | **Time**: 35 min | **Difficulty**: Beginner+
+**Status**: ✅ Complete | **Difficulty**: Beginner+
 
 Make your API safe for concurrent requests and learn how to test it.
 
@@ -62,7 +62,7 @@ Make your API safe for concurrent requests and learn how to test it.
 ---
 
 ### Part 3: PDF Conversion & Production Features
-**Status**: ✅ Complete | **Time**: 40 min | **Difficulty**: Intermediate
+**Status**: ✅ Complete | **Difficulty**: Intermediate
 
 Add logging, implement the converter, and make your API production-ready.
 
@@ -84,14 +84,14 @@ Add logging, implement the converter, and make your API production-ready.
 
 ## Learning Paths
 
-### Path 1: Understand the Basics (1.5 hours)
+### Path 1: Understand the Basics
 1. Read Part 1
 2. Code along with Part 1
 3. Try the exercises
 
 **Result**: You understand Go project structure and HTTP handlers.
 
-### Path 2: Build a Working API (3 hours)
+### Path 2: Build a Working API
 1. Complete Path 1
 2. Read Part 2
 3. Add tests to your code
@@ -99,7 +99,7 @@ Add logging, implement the converter, and make your API production-ready.
 
 **Result**: You have a tested, thread-safe API.
 
-### Path 3: Production Ready (5 hours)
+### Path 3: Production Ready
 1. Complete Path 1 & 2
 2. Read Part 3
 3. Add logging and graceful shutdown
@@ -109,23 +109,23 @@ Add logging, implement the converter, and make your API production-ready.
 
 ## Key Concepts by Topic
 
-| Concept | Part | Duration |
-|---------|------|----------|
-| Project Structure | 1 | 5 min |
-| Interfaces | 1 | 10 min |
-| Dependency Injection | 1 | 8 min |
-| HTTP Handlers | 1 | 10 min |
-| Goroutines | 2 | 8 min |
-| Mutexes & RWMutex | 2 | 12 min |
-| Unit Testing | 2 | 10 min |
-| Mocking | 2 | 8 min |
-| JSON | 2 | 8 min |
-| Logging | 3 | 8 min |
-| Graceful Shutdown | 3 | 10 min |
-| Configuration | 3 | 8 min |
-| Health Checks | 3 | 6 min |
-| Integration Testing | 3 | 10 min |
-| Production Practices | 3 | 10 min |
+| Concept | Part |
+|---------|------|
+| Project Structure | 1 |
+| Interfaces | 1 |
+| Dependency Injection | 1 |
+| HTTP Handlers | 1 |
+| Goroutines | 2 |
+| Mutexes & RWMutex | 2 |
+| Unit Testing | 2 |
+| Mocking | 2 |
+| JSON | 2 |
+| Logging | 3 |
+| Graceful Shutdown | 3 |
+| Configuration | 3 |
+| Health Checks | 3 |
+| Integration Testing | 3 |
+| Production Practices | 3 |
 
 ## Code Snippets You'll Learn
 
@@ -242,7 +242,7 @@ curl http://localhost:8080/health
 A: Go will download them automatically when you first run `go mod tidy` or `go run`.
 
 ### Q: How long will this take?
-A: Part 1: 30 min, Part 2: 35 min, Part 3: 40 min. Total: ~2 hours. Plus exercises: ~4-5 hours.
+A: It varies by your pace and whether you do exercises. Read and practice at your own speed.
 
 ### Q: Can I skip parts?
 A: Not really. Part 2 builds on Part 1. Part 3 assumes you did Parts 1-2.

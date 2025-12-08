@@ -54,7 +54,9 @@ docs-as-code/
 │   ├── store/                    # Where we store jobs
 │   │   └── store.go              # Job storage
 │   └── converter/                # Converting files
-│       └── converter.go          # Conversion logic
+│       ├── converter.go          # Conversion interface
+│       ├── pdf_converter.go      # PDF converter implementation
+│       └── pdf_converter_test.go # Converter tests
 ├── go.mod                        # What packages we depend on
 ├── go.sum                        # Lock file (trust me on this)
 └── README.md                     # Documentation
@@ -524,11 +526,12 @@ This creates an empty job storage area in memory.
 
 **Step 2: Create the handler**
 ```go
-handler := http.NewServer(jobStore, nil)
+converter := converter.NewPDFConverter()  // Real converter now!
+handler := http.NewServer(jobStore, converter)
 ```
 This creates the thing that will handle requests. It gets:
 - `jobStore`: where to save jobs
-- `nil`: we don't have a converter yet
+- `converter`: the PDF converter (now implemented with `goldmark` and `gofpdf`)
 
 **Step 3: Create router**
 ```go

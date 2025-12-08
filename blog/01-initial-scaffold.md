@@ -57,7 +57,9 @@ internal/
   │   ├── store.go         # Interface definitions
   │   └── memory_store.go  # Development implementation
   └── converter/
-      └── converter.go     # Interface (no implementation yet)
+      ├── converter.go           # Interface definition
+      ├── pdf_converter.go       # PDFConverter implementation
+      └── pdf_converter_test.go  # Converter tests
 ```
 
 **Why `internal/`?** Go's convention: code here can't be imported by external packages. Forces good API boundaries.
@@ -266,7 +268,7 @@ func main() {
 }
 ```
 
-Notice: `converter` is `nil` for now. We're deferring that implementation. The handler will handle it gracefully when needed.
+**Update**: The converter is now fully implemented! We've added a `PDFConverter` that handles real Markdown-to-PDF conversion using `goldmark` and `gofpdf`. This shows how our interface-first design paid off: we could add the implementation without changing any of the handler or wiring code.
 
 ## Testing This Design
 

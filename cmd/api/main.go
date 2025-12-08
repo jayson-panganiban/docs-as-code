@@ -7,6 +7,7 @@ import (
 
 	"github.com/go-chi/chi/v5"
 
+	"docs-as-code/internal/converter"
 	httphandlers "docs-as-code/internal/http"
 	"docs-as-code/internal/store"
 )
@@ -14,10 +15,10 @@ import (
 func main() {
 	// Initialize dependencies
 	documentStore := store.NewMemoryStore()
-	// converter := NewPDFConverter() // TODO: implement when ready
+	pdfConverter := converter.NewPDFConverter()
 
 	// Create the HTTP server with injected dependencies
-	server := httphandlers.NewServer(documentStore, nil)
+	server := httphandlers.NewServer(documentStore, pdfConverter)
 
 	// Set up the chi router
 	router := chi.NewRouter()

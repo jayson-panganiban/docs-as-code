@@ -360,7 +360,8 @@ func TestHandleCreateDocument(t *testing.T) {
         },
     }
     
-    server := NewServer(mockStore, nil)
+    mockConverter := &MockConverter{}  // Or use real converter
+    server := NewServer(mockStore, mockConverter)
     // Create test request and response
     // Call server.HandleCreateDocument()
     // Assert response status and body

@@ -193,7 +193,8 @@ Dependencies are injected at the HTTP server level:
 ```go
 // In cmd/api/main.go
 documentStore := store.NewMemoryStore()
-server := httphandlers.NewServer(documentStore, nil)
+pdfConverter := converter.NewPDFConverter()
+server := httphandlers.NewServer(documentStore, pdfConverter)
 ```
 
 Benefits:
@@ -244,12 +245,13 @@ Store methods return errors for:
 - Job not found
 - Storage failures (future)
 
-### Converter-Level Errors (Future)
+### Converter-Level Errors
 
-Converter methods will return errors for:
-- Invalid Markdown
-- PDF generation failures
-- Resource exhaustion
+Converter methods return errors for:
+- Invalid Markdown (caught by goldmark parser)
+- PDF generation failures (gofpdf rendering errors)
+- File read failures
+- Context cancellation
 
 ## Scalability Considerations
 
@@ -285,7 +287,7 @@ Converter methods will return errors for:
 Test each component in isolation:
 - Handler unit tests with mock store
 - Store unit tests with in-memory implementation
-- Converter unit tests with mock implementation
+- Converter unit tests with real implementation (see `pdf_converter_test.go`)
 
 ### Integration Tests
 

@@ -9,7 +9,9 @@ docs-as-code/
 │       └── main.go                    # Application entry point
 ├── internal/
 │   ├── converter/
-│   │   └── converter.go               # PDF converter interface
+│   │   ├── converter.go               # PDF converter interface
+│   │   ├── pdf_converter.go           # PDFConverter implementation
+│   │   └── pdf_converter_test.go      # Converter tests
 │   ├── http/
 │   │   └── handlers.go                # HTTP handlers and Server struct
 │   └── store/
@@ -57,9 +59,16 @@ type Converter interface {
 
 **Purpose**: Abstract Markdown-to-PDF conversion
 
-**Implementations**:
-- None yet (pass `nil` to Server)
-- Future: chromedp, wkhtmltopdf, pandoc
+**Current Implementation**: `PDFConverter`
+- Parses Markdown using `goldmark` library
+- Renders to HTML intermediate format
+- Generates PDF using `gofpdf` library
+- Supports basic formatting (headers, lists, code blocks)
+
+**Alternative Implementations**:
+- chromedp (headless Chrome)
+- wkhtmltopdf wrapper
+- pandoc wrapper
 
 **Implementation Contract**:
 - Read Markdown from `in` reader
@@ -290,6 +299,8 @@ require (
 |---------|---------|---------|
 | `chi/v5` | HTTP router | cmd/api/main.go |
 | `google/uuid` | UUID generation | internal/store/memory_store.go |
+| `goldmark` | Markdown parsing | internal/converter/pdf_converter.go |
+| `gofpdf` | PDF generation | internal/converter/pdf_converter.go |
 
 ## Error Handling Pattern
 
@@ -356,14 +367,42 @@ func TestHandleCreateDocument(t *testing.T) {
 }
 ```
 
+## PDF Converter Implementation Details
+
+### PDFConverter Architecture
+
+The `PDFConverter` implements a two-stage conversion pipeline:
+
+1. **Markdown to HTML**:
+   - Uses `goldmark` for RFC 7763 compliant Markdown parsing
+   - Supports GitHub Flavored Markdown (GFM) via extension
+   - Outputs HTML suitable for rendering
+
+2. **HTML to PDF**:
+   - Uses `gofpdf` for PDF generation
+   - Strips HTML tags for display
+   - Renders text with formatting:
+     - Headings: Larger fonts (16pt H1, 14pt H2, 12pt H3)
+     - Body: Standard 12pt Arial font
+     - Lists: Inline bullet formatting
+   - Handles page breaks automatically
+
+### Testing
+
+Comprehensive test coverage in `pdf_converter_test.go`:
+- 5 functional test cases (simple markdown, formatting, lists, empty, code)
+- HTML tag stripping tests
+- PDF binary validation (checks for %PDF magic number)
+- Benchmarking for performance analysis
+
 ## Future Implementation Considerations
 
-### For Converter Implementation
+### For Enhanced Converter Implementation
 
-1. **Input Validation**: Check Markdown syntax
+1. **Advanced Formatting**: Table rendering, embedded images
 2. **Resource Limits**: Timeout context after N seconds
-3. **Output Format**: Ensure valid PDF generation
-4. **Error Messages**: Return converter-specific errors
+3. **Output Optimization**: Compression, font embedding
+4. **Error Recovery**: Graceful fallback on parsing failures
 
 ### For Database Implementation
 

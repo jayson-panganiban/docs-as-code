@@ -195,6 +195,19 @@ The API uses standard HTTP status codes to indicate the outcome of a request:
 
 All error responses include a descriptive `error` message to help diagnose the issue.
 
+## Converter Implementation
+
+The API now includes a full PDF converter implementation:
+
+- **Markdown Parser**: Uses `goldmark` for RFC 7763 compliant parsing
+- **PDF Generator**: Uses `gofpdf` for PDF creation
+- **Features**: 
+  - Supports headings, lists, code blocks, and basic formatting
+  - Automatic page breaks
+  - UTF-8 text support
+
+All documents are converted from Markdown to PDF when the conversion job is processed.
+
 ## Examples
 
 ### Example 1: Create and Check Job Status

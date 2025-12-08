@@ -38,8 +38,8 @@ The docs-as-code API is built using clean architecture principles with clear sep
    └────┬─┘    └─────┬──────┘
         │            │
    ┌────▼──────────┐ │ ┌──────────────────┐
-   │MemoryStore   │ └─┤(PDFConverter)    │
-   │(development) │   │(pending impl.)   │
+   │MemoryStore   │ └─┤PDFConverter      │
+   │(development) │   │(gofpdf + goldmark)
    └──────────────┘   └──────────────────┘
 ```
 
@@ -93,9 +93,13 @@ The business logic is split between two interfaces:
 **Interface Methods**:
 - `MarkdownToPDF(ctx context.Context, in io.Reader, out io.Writer) error`: Read Markdown from input, write PDF to output
 
-**Current Implementation**: None (pending)
+**Current Implementation**: `PDFConverter`
+- Uses `goldmark` for Markdown parsing
+- Uses `gofpdf` for PDF generation
+- Renders HTML as PDF with basic formatting support
+- Handles headings with font size variation
 
-**Future Implementations**:
+**Alternative Implementations**:
 - chromedp-based converter (headless Chrome)
 - wkhtmltopdf wrapper
 - pandoc wrapper
@@ -114,7 +118,7 @@ The business logic is split between two interfaces:
 ```
 main()
   ├── Initialize DocumentStore (MemoryStore)
-  ├── Initialize Converter (nil for now)
+  ├── Initialize Converter (PDFConverter)
   ├── Create Server (dependency injection)
   ├── Set up chi Router
   ├── Register Routes
